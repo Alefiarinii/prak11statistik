@@ -1,0 +1,14 @@
+df_arini=read.delim("clipboard")
+View(df_arini)
+head(df_arini)
+model <- aov(korosi..y.~metode..x., data=df_arini)
+summary(model)
+tukey.test <- TukeyHSD(model)
+tukey.test
+df_arini=PlantGrowth
+View(df_arini)
+head(df_arini)
+model <- aov(weight~group, data=df_arini)
+summary(model)
+tukey.test <- TukeyHSD(model)
+tukey.test
